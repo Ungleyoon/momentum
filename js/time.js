@@ -6,10 +6,10 @@ function getTime() {
   const resultMonth = month >= 10 ? month : `0${month}`;
   const date = d.getDate();
   const resultDate = date >= 10 ? date : `0${date}`;
-  const day = d.getDay();
-  const arrDay = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  const resultDay = arrDay[day];
-  today.innerText = `${year}. ${resultMonth}. ${resultDate}.(${resultDay})`;
+  const day = d.toLocaleString("en-US", { weekday: "short" });
+  // const arrDay = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  // const resultDay = arrDay[day];
+  today.innerText = `${year}. ${resultMonth}. ${resultDate}.(${day})`;
 
   const clock = document.querySelector("#clock");
   const hours = d.getHours();
