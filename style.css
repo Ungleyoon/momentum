@@ -108,24 +108,36 @@ body {
 .focus-text {
   margin-top: 20px;
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
 #focus {
   margin-left: 15px;
 }
+.cong {
+  font-size: 15px;
+  color: yellowgreen;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
 .checked {
   color: gray;
   text-decoration: line-through;
 }
 
-/* calendar */
+/* center-below */
 .center-below {
   margin-top: 20px;
   display: flex;
   width: 90%;
   justify-content: space-between;
 }
+/* .center-below > div {
+  display: flex;
+  flex-direction: column;
+} */
 .calendar {
   width: 400px;
   background-color: rgba(255, 255, 255, 0.863);
@@ -234,5 +246,5 @@ body {
 
 .todo-list {
   width: 400px;
-  background-color: white;
+  height: 200px;
 }

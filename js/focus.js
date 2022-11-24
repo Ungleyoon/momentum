@@ -4,6 +4,7 @@ const focus = document.querySelector("#focus");
 const focusBox = document.querySelector("#focusBox");
 const checkBox = document.querySelector("#checkBox");
 const removeFocus = document.querySelector("#removeFocus");
+const cong = document.querySelector(".cong");
 const TODAY_FOCUS = "todayFocus";
 const CHECKED = "checked";
 let focusObj = {
@@ -28,6 +29,7 @@ function paintFocus() {
   if (focusObj.check) {
     focus.classList.add(CHECKED);
     checkBox.setAttribute(CHECKED, CHECKED);
+    cong.classList.remove(HIDDEN);
   }
   focusBox.classList.remove(HIDDEN);
   checkBox.addEventListener("change", checkedFocus);
@@ -38,10 +40,12 @@ function checkedFocus() {
     focusObj.check = 1;
     checkBox.setAttribute(CHECKED, CHECKED);
     focus.classList.add(CHECKED);
+    cong.classList.remove(HIDDEN);
     saveFocus();
   } else {
     focusObj.check = 0;
     focus.classList.remove(CHECKED);
+    cong.classList.add(HIDDEN);
     saveFocus();
   }
 }
