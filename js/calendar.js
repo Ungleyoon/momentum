@@ -16,17 +16,21 @@ function calendar() {
     date.getMonth(),
     0
   ).getDate(); //저번달 마지막 일자
+  console.log("prevLastDate:" + prevLastDate);
   const thisLastDate = new Date(
     date.getFullYear(),
     date.getMonth() + 1,
     0
   ).getDate(); //이번달 마지막 일자
+  console.log("thisLastDate:" + thisLastDate);
   const thisFirstDay = date.getDay();
+  console.log("thisFirstDay:" + thisFirstDay);
   const thisLastDay = new Date(
     date.getFullYear(),
     date.getMonth() + 1,
     0
   ).getDay();
+  console.log("thisLastDay:" + thisLastDay);
   let days = "";
   const nextDates = 7 - thisLastDay - 1;
 
@@ -38,7 +42,8 @@ function calendar() {
   for (let i = 1; i <= thisLastDate; i++) {
     if (
       i === new Date().getDate() &&
-      date.getMonth() === new Date().getMonth()
+      date.getMonth() === new Date().getMonth() &&
+      date.getFullYear() == new Date().getFullYear()
     ) {
       days += `<div class="item today">${i}</div>`;
     } else {
@@ -69,6 +74,7 @@ document.querySelector(".prev-month").addEventListener("click", () => {
 });
 document.querySelector(".next-month").addEventListener("click", () => {
   date.setMonth(date.getMonth() + 1);
+  console.log(date.getMonth());
   calendar();
 });
 calendar();

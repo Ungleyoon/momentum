@@ -140,9 +140,9 @@ body {
 } */
 .calendar {
   width: 400px;
-  background-color: rgba(255, 255, 255, 0.863);
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 16px;
-  color: black;
+  color: whitesmoke;
   font-size: 18px;
 }
 
@@ -162,17 +162,17 @@ body {
 .month {
   font-weight: 700;
   font-size: 1.6em;
-  color: #f8788f;
+  color: tomato;
 }
 .date p {
   font-size: 0.9em;
   font-weight: 400;
-  color: grey;
+  color: whitesmoke;
 }
 .prev-month,
 .next-month {
   cursor: pointer;
-  color: grey;
+  color: whitesmoke;
   width: 30px;
   height: 30px;
   text-align: center;
@@ -191,7 +191,7 @@ body {
   justify-content: space-evenly;
   font-weight: 400;
   font-size: 1em;
-  color: #6691db;
+  color: whitesmoke;
   cursor: default;
 }
 .calendar-days div {
@@ -199,21 +199,21 @@ body {
   justify-content: center;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid pink;
+  border-bottom: 1px solid yellowgreen;
 }
 .calendar-date {
   display: flex;
   font-size: 1em;
   flex-wrap: wrap;
   padding: 5px;
-  color: #6691db;
+  color: whitesmoke;
   font-weight: 300;
   cursor: default;
 }
 
 .calendar-date div {
   width: calc(13.18em / 7);
-  height: 1.78em;
+  height: 1em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -247,4 +247,27 @@ body {
 .todo-list {
   width: 400px;
   height: 200px;
+}
+
+.quote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quote-author::before {
+  content: "- ";
+}
+.quote-author::after {
+  content: " -";
+}
+
+.bgImg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.9;
 }

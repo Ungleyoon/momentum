@@ -27,6 +27,7 @@ function printingTodo(obj) {
   li.appendChild(chk);
   li.appendChild(span);
 
+  //localStorage에 값을 printing할 때 check되어 있는 값은 check된 상태로 출력
   if (obj.check === "1") {
     span.classList.add(CHECKED);
     chk.setAttribute(CHECKED, true);
@@ -41,6 +42,8 @@ function handleCheck(e) {
   const span = e.target.parentNode.childNodes[2];
   const li = span.parentNode;
   const changeTodoIndex = getIndex(li);
+
+  //check된 상태에서 다시 check할 때
   if (span.classList.contains(CHECKED)) {
     todos[changeTodoIndex].check = "0";
     saveTodo();
@@ -52,6 +55,7 @@ function handleCheck(e) {
   }
 }
 
+//li가 부모인 ul노드로 부터 몇번째 자식노드인지 확인
 function getIndex(ele) {
   var i = 0;
   while ((ele = ele.previousSibling) != null) {
