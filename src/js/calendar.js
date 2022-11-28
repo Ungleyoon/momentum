@@ -7,30 +7,26 @@ function calendar() {
   document.querySelector(".month").innerText = date.getMonth() + 1;
   document.querySelector(
     ".date p"
-  ).innerText = `${date.getFullYear()} ${new Date().toLocaleString("en-US", {
+  ).innerText = `${date.getFullYear()} ${date.toLocaleString("en-US", {
     month: "short",
-  })} ${new Date().toLocaleString("en-US", { weekday: "short" })}`;
+  })}`;
 
   const prevLastDate = new Date(
     date.getFullYear(),
     date.getMonth(),
     0
   ).getDate(); //저번달 마지막 일자
-  console.log("prevLastDate:" + prevLastDate);
   const thisLastDate = new Date(
     date.getFullYear(),
     date.getMonth() + 1,
     0
   ).getDate(); //이번달 마지막 일자
-  console.log("thisLastDate:" + thisLastDate);
   const thisFirstDay = date.getDay();
-  console.log("thisFirstDay:" + thisFirstDay);
   const thisLastDay = new Date(
     date.getFullYear(),
     date.getMonth() + 1,
     0
   ).getDay();
-  console.log("thisLastDay:" + thisLastDay);
   let days = "";
   const nextDates = 7 - thisLastDay - 1;
 
@@ -52,9 +48,9 @@ function calendar() {
   }
   //다음달 미리보기
   for (let i = 1; i <= nextDates; i++) {
-    days += `<div class=next-date>${i}</div>`;
-    calendarDate.innerHTML = days;
+    days += `<div class="next-date">${i}</div>`;
   }
+  calendarDate.innerHTML = days;
 
   calendarDate.addEventListener("click", (e) => {
     if (document.getElementsByClassName(CLASS_CLICKED)[0]) {

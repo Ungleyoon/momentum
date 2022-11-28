@@ -17,6 +17,6 @@ const img = [
 const todayImg = img[Math.floor(Math.random() * img.length)];
 const bgImg = document.createElement("img");
 bgImg.classList.add("bgImg");
-bgImg.src = "./img/";
+bgImg.src = "./img/bg/";
 bgImg.src += todayImg;
 document.body.append(bgImg);

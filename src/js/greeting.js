@@ -14,8 +14,7 @@ function greetingMent() {
   if (currentHour > 22) ment = "편안한 밤 되세요.😴";
   else if (currentHour > 19) ment = "오늘 하루도 고생 많았어요!☺️";
   else if (currentHour > 16) ment = "오늘도 거의 끝났어요. 조금만 힘내요💪";
-  else if (currentHour > 13)
-    ment = "점심 맛있게 드셨나요? 오후도 파이팅해요!😁";
+  else if (currentHour > 13) ment = "점심 맛있게 드셨나요?😁";
   else if (currentHour > 10) ment = "좋은 하루가 되었으면 해요!";
   else if (currentHour > 6) ment = "좋은 아침이에요.";
   else ment = "아직 안주무시다니 대단해요!";
