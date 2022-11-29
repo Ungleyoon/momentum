@@ -28,7 +28,7 @@
         <div class="greeting-box">
           <div class="hidden" id="greeting"></div>
           <div class="hidden" id="userName"></div>
-          <button class="hidden" id="removeBtn">
+          <button class="hidden btn" id="removeBtn">
             <i class="fa-solid fa-delete-left fa-sm"></i>
           </button>
         </div>
@@ -44,42 +44,44 @@
 
         <div class="hidden" id="focusBox">
           <div class="focus-box">
-            <div>Today's Focus</div>
+            <div>Today</div>
             <div class="focus-text">
               <input id="checkBox" type="checkbox" />
               <div id="focus"></div>
               <span class="hidden cong">우와 고생하셨어요!🎉</span>
-              <button id="removeFocus"><i class="fa-solid fa-pen"></i></button>
+              <button id="removeFocus" class="btn">
+                <i class="fa-solid fa-pen"></i>
+              </button>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="center-below">
-      <div>
-        <h2>Calendar</h2>
-        <div class="calendar">
-          <div class="calendar-top">
-            <i class="prev-month fa-solid fa-angle-left"></i>
-            <div class="date">
-              <div class="month"></div>
-              <p></p>
-            </div>
-            <i class="next-month fa-solid fa-angle-right"></i>
+    <div class="calendar">
+      <div class="calendar-container">
+        <div class="calendar-top">
+          <i class="prev-month fa-solid fa-angle-left"></i>
+          <div class="date">
+            <div class="month"></div>
+            <p></p>
           </div>
-          <div class="calendar-days">
-            <div>Sun</div>
-            <div>Mon</div>
-            <div>Tue</div>
-            <div>Wed</div>
-            <div>Thu</div>
-            <div>Fri</div>
-            <div>Sat</div>
-          </div>
-          <div class="calendar-date"></div>
+          <i class="next-month fa-solid fa-angle-right"></i>
         </div>
+        <div class="calendar-days">
+          <div>Sun</div>
+          <div>Mon</div>
+          <div>Tue</div>
+          <div>Wed</div>
+          <div>Thu</div>
+          <div>Fri</div>
+          <div>Sat</div>
+        </div>
+        <div class="calendar-date"></div>
       </div>
+      <div><button id="calBtn">Calendar</button></div>
+    </div>
+    <div class="todo">
       <div class="todo-list">
         <div><h2>Todo-List</h2></div>
         <form id="todoForm">
@@ -90,13 +92,14 @@
         </form>
         <ul id="todoUl"></ul>
       </div>
+      <div><button id="todoBtn">Todo-List</button></div>
     </div>
-    <div class="bottom">
-      <div class="quote">
-        <span class="quote-text"></span>
-        <span class="quote-author"></span>
-      </div>
+
+    <div class="quote">
+      <span class="quote-text"></span>
+      <span class="quote-author"></span>
     </div>
+
     <script src="./src/js/weatherKey.js"></script>
     <script src="./src/js/weather.js"></script>
     <script src="./src/js/time.js"></script>

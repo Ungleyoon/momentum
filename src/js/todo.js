@@ -90,3 +90,7 @@ if (savedTodo !== null) {
   parsedTodo.forEach(printingTodo);
 }
 todoForm.addEventListener("submit", handleSubmitTodo);
+
+document.querySelector("#todoBtn").addEventListener("click", function () {
+  document.querySelector(".todo-list").classList.toggle("show");
+});

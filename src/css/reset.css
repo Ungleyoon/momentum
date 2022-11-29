@@ -127,3 +127,25 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+input {
+  font-family: "Jua", sans-serif;
+  outline: none;
+  background: none;
+  border: none;
+  border-bottom: 2px solid gray;
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+input:focus,
+input:active {
+  border-bottom: 2px solid whitesmoke;
+}
+
+button {
+  background: none;
+  border: none;
+  color: white;
+}
+button:hover {
+  cursor: pointer;
+}

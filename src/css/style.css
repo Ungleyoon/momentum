@@ -4,30 +4,10 @@
   box-sizing: border-box;
 }
 html {
-  font-size: 62.5%;
+  font-size: 0.8vw;
   height: 100vh;
 }
-input {
-  outline: none;
-  background: none;
-  border: none;
-  border-bottom: 2px solid gray;
-  color: white;
-  transition: all 0.2s ease-in-out;
-}
-input:focus,
-input:active {
-  border-bottom: 2px solid whitesmoke;
-}
 
-button {
-  background: none;
-  border: none;
-  color: white;
-}
-button:hover {
-  cursor: pointer;
-}
 body {
   font-family: "Jua", sans-serif;
   width: 100%;
@@ -38,25 +18,41 @@ body {
   background-color: black;
   color: white;
 }
+.checked {
+  color: gray;
+  text-decoration: line-through;
+}
+.hidden {
+  display: none;
+}
+.btn {
+  color: gray;
+  margin-left: 10px;
+  transition: all 0.2s ease-in-out;
+}
+.btn:hover {
+  color: white;
+}
+
 /* Weather */
 .weather {
   position: absolute;
   right: 1vw;
   top: 1vh;
   display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows: 1fr 1fr;
-  grid-column-gap: 0.4vw;
+  grid-template-columns: 2.5vw 4vw;
+  grid-template-rows: 3vh 2vh;
+  grid-column-gap: 0.1vw;
   text-align: center;
-  font-size: 1.5rem;
-  background-color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 1.5rem;
-  padding: 0.5rem;
+  padding: 0.2rem;
   color: black;
   place-items: center;
 }
 .weather-icon {
-  width: 3rem;
+  width: 2rem;
 }
 /* .weather {
   position: absolute;
@@ -82,29 +78,26 @@ body {
   width: 3rem;
   margin-right: 1vw;
 } */
+
 /* Day, Clock */
 .top {
   height: 30vh;
-  margin-top: 5vh;
+  padding-top: 5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 7rem;
+  font-size: 5rem;
 }
 #day {
   margin-bottom: 2vh;
 }
 #clock {
-  font-size: 16rem;
-  /* font-weight: bold; */
-}
-.hidden {
-  display: none;
+  font-size: 12rem;
 }
 
 /* Name, Main Focus */
 .center {
-  margin-top: 2vh;
+  margin: 5vh 0;
   height: 20vh;
   display: flex;
   flex-direction: column;
@@ -115,22 +108,22 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 3vh;
+  margin-bottom: 2vh;
 }
 #nameForm {
-  font-size: 4rem;
+  font-size: 2rem;
 }
 #nameForm label {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 #nameInput {
   margin-left: 1.5rem;
-  font-size: 4rem;
+  font-size: 3rem;
   width: 40%;
   text-align: center;
 }
 .greeting-box {
-  font-size: 40px;
+  font-size: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -138,10 +131,6 @@ body {
 
 #userName {
   margin-left: 15px;
-}
-#removeBtn {
-  color: gray;
-  margin-left: 10px;
 }
 
 .focus {
@@ -151,23 +140,26 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 #focusInput {
-  margin-top: 40px;
+  margin-top: 2vh;
   font-size: 3rem;
   text-align: center;
+  width: 100%;
 }
 .focus-box {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 2vh;
 }
 .focus-box > div:first-child {
-  font-size: 30px;
+  font-size: 2rem;
 }
 .focus-text {
-  margin-top: 20px;
+  margin-top: 3vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -183,30 +175,34 @@ body {
   margin: 0 10px;
 }
 
-.checked {
-  color: gray;
-  text-decoration: line-through;
-}
-
-/* Calendar, Todo-List */
-.center-below {
-  height: 40vh;
-  display: flex;
-  width: 90%;
-  justify-content: space-between;
-}
-
+/* Calendar*/
 .calendar {
-  width: 400px;
+  position: absolute;
+  bottom: 1vh;
+  left: 1vw;
+  width: 30vw;
+}
+#calBtn {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1vw;
+  border-radius: 1.5rem;
+  margin-top: 2vh;
+}
+
+.calendar-container {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(5vh);
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 16px;
   color: whitesmoke;
   font-size: 18px;
+  padding: 2vw;
+  transition: all 0.2s ease-in-out;
 }
 
 .calendar-top {
   display: flex;
-  padding-top: 18px;
   padding-bottom: 17px;
   justify-content: space-around;
   align-items: center;
@@ -247,13 +243,12 @@ body {
 .calendar-days {
   display: flex;
   justify-content: space-evenly;
-  font-weight: 400;
   font-size: 1em;
   color: whitesmoke;
   cursor: default;
 }
 .calendar-days div {
-  width: calc(15em / 7);
+  width: calc(26vw / 7);
   justify-content: center;
   display: flex;
   align-items: center;
@@ -263,20 +258,18 @@ body {
   display: flex;
   font-size: 1em;
   flex-wrap: wrap;
-  padding: 5px;
   color: whitesmoke;
-  font-weight: 300;
   cursor: default;
 }
 
 .calendar-date div {
-  width: calc(13.18em / 7);
-  height: 1em;
+  width: calc(26vw / 7);
+  height: calc(26vw / 7);
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  margin: 6px 10.6px;
+  /* margin: 6px 10.6px; */
 }
 
 .calendar-date div:hover {
@@ -302,18 +295,38 @@ body {
   color: rgba(0, 0, 0, 0.2);
 }
 
+.todo {
+  position: absolute;
+  right: 1vw;
+  bottom: 1vh;
+  width: 30vw;
+}
+.todo > div:last-child {
+  float: right;
+}
+#todoBtn {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1vw;
+  border-radius: 1.5rem;
+  margin-top: 2vh;
+}
 .todo-list {
-  width: 400px;
-  height: 200px;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(5vh);
+  height: 40vh;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  font-size: 2rem;
+  overflow: auto;
+  transition: all 0.2s ease-in-out;
 }
 
 /* Quote */
-.bottom {
-  width: 100%;
-  height: 6vh;
-}
-
 .quote {
+  position: absolute;
+  bottom: 1vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -334,4 +347,9 @@ body {
   height: 100%;
   z-index: -1;
   opacity: 0.9;
+}
+.show {
+  transform: none;
+  opacity: 1;
+  visibility: visible;
 }
