@@ -2,7 +2,7 @@ const nameForm = document.querySelector("#nameForm");
 const nameInput = document.querySelector("#nameInput");
 const greeting = document.querySelector("#greeting");
 const userName = document.querySelector("#userName");
-const removeBtn = document.querySelector("#removeBtn");
+const removeName = document.querySelector("#removeName");
 let ment;
 const HIDDEN = "hidden";
 const USERNSME_KEY = "username";
@@ -36,8 +36,8 @@ function paintGreeting(name) {
   userName.innerText = `${name}님!`;
   userName.classList.remove(HIDDEN);
   greeting.classList.remove(HIDDEN);
-  removeBtn.classList.remove(HIDDEN);
-  removeBtn.addEventListener("click", removeUsername);
+  removeName.classList.remove(HIDDEN);
+  removeName.addEventListener("click", removeUsername);
 }
 
 function removeUsername() {

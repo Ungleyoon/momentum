@@ -15,10 +15,10 @@ function printingTodo(obj) {
   span.classList.add("todo-span");
   span.innerText = obj.text;
   const button = document.createElement("button");
-  button.classList.add("todo-delete");
+  button.classList.add("todo-delete", "todo-btn");
   button.innerHTML = '<i class="fa-solid fa-trash"></i>';
   const chk = document.createElement("input");
-  chk.classList.add("todo-chk");
+  chk.classList.add("todo-chk", "todo-btn");
   chk.setAttribute("type", "checkbox");
   const li = document.createElement("li");
   li.classList.add("todo-li");
