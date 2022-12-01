@@ -3,7 +3,7 @@ function getTime() {
   const today = document.querySelector("#day");
   const year = d.getFullYear();
   const month = d.getMonth();
-  const resultMonth = month >= 10 ? month : `0${month}`;
+  const resultMonth = month >= 10 ? month + 1 : `0${month + 1}`;
   const date = d.getDate();
   const resultDate = date >= 10 ? date : `0${date}`;
   const day = d.toLocaleString("en-US", { weekday: "short" });

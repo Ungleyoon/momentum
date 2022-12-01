@@ -9,7 +9,7 @@
   </head>
   <body>
     <div class="weather">
-      <img src="./img/icons/" class="weather-icon" />
+      <img src="" class="weather-icon" />
       <div class="weather-city"></div>
       <div class="weather-weather"></div>
       <div class="weather-temperature"></div>
@@ -27,7 +27,7 @@
         <div class="greeting-box">
           <div class="hidden" id="greeting"></div>
           <div class="hidden" id="userName"></div>
-          <button class="hidden btn" id="removeName">
+          <button class="hidden btn activeBtn" id="removeName">
             <i class="fa-solid fa-delete-left"></i>
           </button>
         </div>
@@ -48,8 +48,8 @@
               <input id="checkBox" type="checkbox" />
               <div id="focus"></div>
               <span class="hidden cong">우와 고생하셨어요!🎉</span>
-              <button id="removeFocus" class="btn">
-                <i class="fa-solid fa-pen"></i>
+              <button id="removeFocus" class="btn activeBtn">
+                <i class="fa-solid fa-pen fa-lg"></i>
               </button>
             </div>
           </div>
@@ -78,7 +78,7 @@
         </div>
         <div class="calendar-date"></div>
       </div>
-      <div><button id="calBtn">Calendar</button></div>
+      <div><button id="calBtn" class="activeBtn">Calendar</button></div>
     </div>
     <div class="todo">
       <div class="todo-list">
@@ -91,7 +91,7 @@
         </form>
         <ul id="todoUl"></ul>
       </div>
-      <div><button id="todoBtn">Todo-List</button></div>
+      <div><button id="todoBtn" class="activeBtn">Todo-List</button></div>
     </div>
 
     <div class="quote">

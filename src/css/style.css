@@ -354,3 +354,7 @@ body {
   opacity: 1;
   visibility: visible;
 }
+
+.activeBtn:active {
+  transform: scale(0.9);
+}

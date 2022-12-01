@@ -13,8 +13,7 @@ function setWeather() {
       const city = document.querySelector(".weather-city");
       const weather = document.querySelector(".weather-weather");
       const temperature = document.querySelector(".weather-temperature");
-      weatherIcon.src += data.weather[0].icon;
-      weatherIcon.src += ".png";
+      weatherIcon.src = `./img/icons/${data.weather[0].icon}.png`;
       city.innerText = data.name;
       weather.innerText = data.weather[0].main;
       temperature.innerText = `${data.main.temp}℃`;
@@ -43,3 +42,4 @@ if (getCoords() === null) {
     saveCoords(res.coords.latitude, res.coords.longitude);
   });
 } else setWeather();
+setInterval(setWeather, 600000); //10분마다 날씨 갱신

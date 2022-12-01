@@ -28,11 +28,11 @@ function calendar() {
     0
   ).getDay();
   let days = "";
-  const nextDates = 7 - thisLastDay - 1;
-
+  let count = 0;
   //저번달 미리보기
   for (let i = thisFirstDay; i > 0; i--) {
     days += `<div class="prev-date">${prevLastDate - i + 1}</div>`;
+    count++;
   }
   //이번달
   for (let i = 1; i <= thisLastDate; i++) {
@@ -45,7 +45,10 @@ function calendar() {
     } else {
       days += `<div class="item">${i}</div>`;
     }
+    count++;
   }
+  console.log(count);
+  const nextDates = count > 35 ? 7 - thisLastDay - 1 : 7 - thisLastDay - 1 + 7; //calendar 6row fix
   //다음달 미리보기
   for (let i = 1; i <= nextDates; i++) {
     days += `<div class="next-date">${i}</div>`;
@@ -70,7 +73,6 @@ document.querySelector(".prev-month").addEventListener("click", () => {
 });
 document.querySelector(".next-month").addEventListener("click", () => {
   date.setMonth(date.getMonth() + 1);
-  console.log(date.getMonth());
   calendar();
 });
 calendar();
