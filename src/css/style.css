@@ -294,17 +294,19 @@ body {
 }
 .todo-list {
   width: 380px;
-  height: 368px;
+  height: 418px;
   visibility: hidden;
   opacity: 0;
   transform: translateY(5vh);
-  height: 368px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   padding: 15px;
   font-size: 22px;
   overflow: auto;
   transition: all 0.2s ease-in-out;
+}
+.todo-list::-webkit-scrollbar-track {
+  background-color: yellow;
 }
 .todo-list > div {
   margin-bottom: 10px;

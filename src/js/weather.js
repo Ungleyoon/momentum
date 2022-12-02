@@ -1,4 +1,5 @@
 const COORDS = "coords";
+const WEATHER_KEY = "ebf0c687c1ab7045d41076fda0f8298b";
 function setWeather() {
   const coords = getCoords();
   const lat = coords.lat;
