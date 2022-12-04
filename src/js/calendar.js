@@ -78,6 +78,6 @@ document.querySelector(".next-month").addEventListener("click", () => {
 calendar();
 
 const calBtn = document.querySelector("#calBtn");
-calBtn.addEventListener("click", function () {
-  document.querySelector(".calendar-container").classList.toggle("show");
-});
+calBtn.addEventListener("click", () =>
+  document.querySelector(".calendar-container").classList.toggle("show")
+);

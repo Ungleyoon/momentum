@@ -18,6 +18,7 @@ function setWeather() {
       city.innerText = data.name;
       weather.innerText = data.weather[0].main;
       temperature.innerText = `${data.main.temp}℃`;
+      console.log(data);
     });
 }
 function onGeoError() {

@@ -39,6 +39,7 @@ function printingTodo(obj) {
 }
 
 function handleCheck(e) {
+  console.log(e);
   const span = e.target.parentNode.childNodes[2];
   const li = span.parentNode;
   const changeTodoIndex = getIndex(li);
@@ -91,6 +92,8 @@ if (savedTodo !== null) {
 }
 todoForm.addEventListener("submit", handleSubmitTodo);
 
-document.querySelector("#todoBtn").addEventListener("click", function () {
-  document.querySelector(".todo-list").classList.toggle("show");
-});
+document
+  .querySelector("#todoBtn")
+  .addEventListener("click", () =>
+    document.querySelector(".todo-list").classList.toggle("show")
+  );

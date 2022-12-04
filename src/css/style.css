@@ -11,7 +11,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: black;
   color: white;
 }
 .checked {
@@ -69,9 +68,8 @@ body {
 
 /* Name, Main Focus */
 .center {
-  margin-top: 20px;
-  height: 20vh;
   display: flex;
+  margin-top: 20px;
   flex-direction: column;
   align-items: center;
 }
@@ -212,11 +210,9 @@ body {
   padding-top: 5px;
   transition: 0.2s;
 }
-.prev-month:hover {
-  padding-right: 8px;
-}
+.prev-month:hover,
 .next-month:hover {
-  padding-left: 8px;
+  padding-right: 8px;
 }
 
 .calendar-days {
@@ -228,9 +224,7 @@ body {
 }
 .calendar-days div {
   width: calc(350px / 7);
-  justify-content: center;
-  display: flex;
-  align-items: center;
+  text-align: center;
   padding-bottom: 10px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
@@ -305,9 +299,6 @@ body {
   overflow: auto;
   transition: all 0.2s ease-in-out;
 }
-.todo-list::-webkit-scrollbar-track {
-  background-color: yellow;
-}
 .todo-list > div {
   margin-bottom: 10px;
 }
@@ -349,7 +340,6 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
-  opacity: 0.9;
 }
 .show {
   transform: none;
