@@ -34,7 +34,7 @@ function calendar() {
     days += `<div class="prev-date">${prevLastDate - i + 1}</div>`;
     count++;
   }
-  //이번달
+  //이번달 출력
   for (let i = 1; i <= thisLastDate; i++) {
     if (
       i === new Date().getDate() &&
